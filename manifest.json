@@ -9,5 +9,11 @@
   "host_permissions": ["*://*.ebay.com/*"],
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.ebay.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
 }
